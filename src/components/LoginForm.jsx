@@ -1,7 +1,9 @@
 import axios from "axios";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import * as Yup from "yup";
+import { setUserToState } from "../store/userSlice";
 
 const passwordRegex = /^(?=.*[A-Z])(?=.*[\W]).{8,}$/;
 
@@ -19,7 +21,7 @@ const initialValues = {
 
 const LoginForm = () => {
   const [error, setError] = useState(null);
-  console.log("LoginForm", error);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (error) {
@@ -38,6 +40,7 @@ const LoginForm = () => {
       });
 
       console.log(response.data);
+      dispatch(setUserToState(response.data.user, response.data.token));
     } catch (error) {
       console.log(error);
       if (error.response.status === 404) {
