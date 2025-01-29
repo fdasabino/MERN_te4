@@ -37,16 +37,16 @@ const LoginForm = () => {
         password: values.password,
       });
 
-      console.log(response);
+      console.log(response.data);
     } catch (error) {
       console.log(error);
       if (error.response.status === 404) {
-        setError("User not found");
+        setError(error.response.data.message);
         return;
       }
 
       if (error.response.status === 400) {
-        setError("Invalid credentials");
+        setError(error.response.data.message);
         return;
       }
     }
