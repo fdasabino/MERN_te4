@@ -58,7 +58,6 @@ const AppRoutes = () => {
         />
       ))}
 
-      {/* Redirect logged-in users to dashboard if they try to access auth pages */}
       {user && (
         <Route
           path="/login"
