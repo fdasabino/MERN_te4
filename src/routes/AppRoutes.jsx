@@ -11,7 +11,7 @@ const routes = [
     id: 1,
     path: "/",
     element: <Home />,
-    protected: true,
+    protected: false,
   },
   {
     id: 2,
