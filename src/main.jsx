@@ -1,12 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter, Route, Routes } from "react-router";
-import Home from "./routes/Home.jsx";
-import Login from "./routes/auth/Login.jsx";
-import Register from "./routes/auth/Register.jsx";
-
 import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router";
 import { PersistGate } from "redux-persist/integration/react";
+import AppRoutes from "./routes/AppRoutes.jsx";
 import { persistor, store } from "./store/index.js";
 
 createRoot(document.getElementById("root")).render(
@@ -14,20 +11,7 @@ createRoot(document.getElementById("root")).render(
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <BrowserRouter>
-          <Routes>
-            <Route
-              path="/"
-              element={<Home />}
-            />
-            <Route
-              path="/login"
-              element={<Login />}
-            />
-            <Route
-              path="/register"
-              element={<Register />}
-            />
-          </Routes>
+          <AppRoutes />
         </BrowserRouter>
       </PersistGate>
     </Provider>
