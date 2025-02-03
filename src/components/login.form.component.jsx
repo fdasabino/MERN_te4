@@ -59,6 +59,12 @@ const StyledButton = styled.button`
   cursor: pointer;
   font-size: 1rem;
   border-radius: 5px;
+  transition: all;
+  transition-duration: 500ms;
+
+  &:hover {
+    opacity: 0.9;
+  }
 `;
 
 const LoginForm = () => {
