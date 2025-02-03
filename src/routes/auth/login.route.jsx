@@ -1,11 +1,19 @@
+import styled from "styled-components";
 import LoginForm from "../../components/login.form.component";
+
+const StyledContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+`;
 
 const Login = () => {
   return (
-    <div>
-      <h3>Login</h3>
+    <StyledContainer>
       <LoginForm />
-    </div>
+    </StyledContainer>
   );
 };
 

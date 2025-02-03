@@ -37,6 +37,15 @@ const StyledWrapper = styled.div`
   text-align: center;
 `;
 
+const StyledInput = styled(Field)`
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+`;
+
 const StyledErrorMessage = styled(ErrorMessage)`
   color: red;
   font-size: 0.8rem;
@@ -104,7 +113,7 @@ const LoginForm = () => {
         <StyledForm>
           <StyledWrapper>
             <label htmlFor="email">Email</label>
-            <Field
+            <StyledInput
               type="email"
               id="email"
               name="email"
@@ -117,7 +126,7 @@ const LoginForm = () => {
           </StyledWrapper>
           <StyledWrapper>
             <label htmlFor="password">Password</label>
-            <Field
+            <StyledInput
               type="password"
               id="password"
               name="password"
