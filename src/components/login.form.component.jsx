@@ -34,7 +34,7 @@ const LoginForm = () => {
   // handle login
   const handleLogin = async (values) => {
     try {
-      const response = await axios.post("http://localhost:4000/api/auth/login", {
+      const response = await axios.post("https://server-setup-express.vercel.app/api/auth/login", {
         email: values.email,
         password: values.password,
       });
