@@ -3,7 +3,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import * as Yup from "yup";
-import { setUserToState } from "../store/userSlice";
+import { setUserToState } from "../store/user.slice";
 
 const passwordRegex = /^(?=.*[A-Z])(?=.*[\W]).{8,}$/;
 

@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { clearUser } from "../store/userSlice";
+import { clearUser } from "../store/user.slice";
 
 const Home = () => {
   const { user } = useSelector((state) => state.user);

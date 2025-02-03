@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router";
-import LoginForm from "../../components/LoginForm";
+import LoginForm from "../../components/login.form.compnent";
 
 const Login = () => {
   const { user } = useSelector((state) => state.user);
