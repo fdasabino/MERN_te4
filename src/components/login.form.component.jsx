@@ -39,7 +39,6 @@ const LoginForm = () => {
         password: values.password,
       });
 
-      console.log(response.data);
       dispatch(setUserToState(response.data.user, response.data.token));
     } catch (error) {
       console.log(error);
